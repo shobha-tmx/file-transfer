@@ -7,8 +7,8 @@ from dateutil.tz import tzutc
 current_datetime = datetime.datetime.now(timezone.utc)
 time = 30 # Time in minutes, Files less than this time will be considered to copy
 
-SOURCE_BUCKET="SOURCE_BUCKET"
-DESTINATION_BUCKET="DESTINATION_BUCKET"
+SOURCE_BUCKET="tmx-sb-copy"
+DESTINATION_BUCKET="tmx-sb-dest"
 
 def file_transfer(file):
 	s3_resource = boto3.resource('s3')
